@@ -1,0 +1,121 @@
+body {
+    background-color: #292a2c;
+    font-family: "Roboto", sans-serif;
+}
+
+.find {
+    align-items: center;
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+
+    &__search {
+        display: flex;
+        margin-bottom: 10px;
+
+        &-input {
+            border: none;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            height: 20px;
+            padding: 5px;
+            outline: none;
+            transition: 0.3s all ease;
+            width: 200px;
+
+            &:focus {
+                background-color: lightcyan;
+            }
+        }
+
+        &-btn {
+            background-color: #546270;
+            border: none;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s all ease;
+            width: 70px;
+
+            &:hover,
+            &:focus {
+                background-color: darken($color: #546270, $amount: 15%);
+            }
+        }
+    }
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #546270;
+    border-radius: 15px;
+    display: flex;
+    min-height: 100px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    width: 280px;
+
+    &:hover {
+        box-shadow: 0px 3px 15px -7px #000;
+    }
+
+    &__left {
+        padding: 10px 0;
+        width: 40%;
+
+        &-title {
+            font-size: 26px;
+            font-weight: 500;
+            margin: 0;
+            padding: 10px 0 0 10px;
+        }
+
+        &-symbol {
+            font-size: 12px;
+            font-weight: 300;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        &-price {
+            align-self: flex-end;
+            margin: 0;
+            padding: 13px 10px 0 0;
+            font-weight: 300;
+        }
+    }
+}
+
+.change {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    &__title {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    &__number {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: right;
+        padding-right: 10px;
+    }
+}
